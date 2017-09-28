@@ -7,13 +7,18 @@
  */
 include_once "9.php";
 
-switch($day){
-    case $day >= 1 && $day <= 5:
-        echo "Это рабочий день";
-        break;
-    case $day >= 5 && $day <= 7:
-        echo "Это выходной день";
-        break;
-    default:
-        echo "Неизвестный день";
+if($day == 0){
+    echo  "Не бывает 0-го дня недели!";
+}
+else {
+    switch ($day) {
+        case $day >= 1 && $day <= 5:
+            echo "Это рабочий день";
+            break;
+        case $day >= 5 && $day <= 7:
+            echo "Это выходной день";
+            break;
+        default:
+            echo "Неизвестный день";
+    }
 }
